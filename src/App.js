@@ -20,9 +20,9 @@ class App extends Component {
                 <div>
                     <Appbar/>
                     <Sidebar/>
-                    <Route path='/' component ={Dashboard}/>
-                    <Route path='/' component ={List}/>
-                    <Route path='/' component ={Form}/>
+                    <Route path="/" component={Dashboard}/>
+                    <Route path="/" component={List}/>
+                    <Route path="/" component={Form}/>
                     <Footer/>
 
                 </div>
