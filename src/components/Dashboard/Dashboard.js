@@ -6,7 +6,7 @@ class Dashboard extends Component{
             <div>
                 <h1>PubFinder</h1>
                 <h2>Wyszukiwarka najlepszych lokali w Twojej okolicy</h2>
-                <h3>Uruchom aplikację i wyszukaj lokal idealny dla Ciebie! </h3>
+                <h3>Uruchom aplikację i wyszukaj lokal idealny dla Ciebie!! </h3>
                 <button>Start</button>
             </div>
         )
