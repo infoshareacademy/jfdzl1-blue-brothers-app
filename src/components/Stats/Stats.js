@@ -8,11 +8,9 @@ class Stats extends Component{
     render(){
         return(
             <div>
-
-                <h1>Statystyki</h1>
-
                 <Grid>
                     <Row>
+                        <h1>Statystyki</h1>
                         <Col xs={4} >
                             <h2> Visitor </h2>
                             <BarChart width={730} height={250} data={data}>
@@ -25,7 +23,7 @@ class Stats extends Component{
                                 <Bar dataKey="uv" fill="#82ca9d" />
                             </BarChart>
                         </Col>
-                        
+
                     </Row>
                 </Grid>
             </div>
