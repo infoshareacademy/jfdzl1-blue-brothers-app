@@ -4,17 +4,15 @@ import { Col, Row, Grid } from 'react-bootstrap'
 
 
 
-class Dashboard extends Component{
+class Stats extends Component{
     render(){
         return(
             <div>
 
-                <h1>PubFinder</h1>
-                <h2>Wyszukiwarka najlepszych lokali w Twojej okolicy</h2>
-                <h3>Uruchom aplikację i wyszukaj lokal idealny dla Ciebie!! </h3>
-                <button style={buttonStyle}>Start</button>
-                    <Grid>
-                        <Row>
+                <h1>Statystyki</h1>
+
+                <Grid>
+                    <Row>
                         <Col xs={4} >
                             <h2> Visitor </h2>
                             <LineChart width={300} height={200} data={data}>
@@ -42,8 +40,8 @@ class Dashboard extends Component{
                                 <YAxis />
                             </LineChart>
                         </Col>
-                        </Row>
-                    </Grid>
+                    </Row>
+                </Grid>
             </div>
         )
     }
@@ -88,4 +86,4 @@ const buttonStyle = {
 };
 
 
-export default Dashboard;
+export default Stats;

@@ -7,6 +7,7 @@ import Dashboard from './components/Dashboard';
 import Form from './components/Form';
 import List from './components/List';
 import Footer from './components/Footer';
+import Stats from './components/Stats';
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
                     <Route path="/" component={Dashboard}/>
                     <Route path="/" component={List}/>
                     <Route path="/" component={Form}/>
+                    <Route path="/stats" component={Stats}/>
                     <Footer/>
 
                 </div>
