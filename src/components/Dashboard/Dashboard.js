@@ -8,11 +8,16 @@ class Dashboard extends Component{
     render(){
         return(
             <div>
-
+                <Grid>
+                    <Row>
+                        <Col xs={8} >
                 <h1>PubFinder</h1>
                 <h2>Wyszukiwarka najlepszych lokali w Twojej okolicy</h2>
                 <h3>Uruchom aplikację i wyszukaj lokal idealny dla Ciebie!! </h3>
                 <button style={buttonStyle}>Start</button>
+                        </Col>
+                    </Row>
+                </Grid>
                     <Grid>
                         <Row>
                         <Col xs={4} >
