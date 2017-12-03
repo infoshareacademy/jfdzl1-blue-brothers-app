@@ -21,5 +21,4 @@ const buttonStyle = {
     backgroundColor: 'green',
     color: 'yellow',
     fontSize: 20
-
 };

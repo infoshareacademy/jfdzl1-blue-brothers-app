@@ -1,22 +1,36 @@
 import React, {Component} from 'react';
 
 class Form extends Component{
+    constructor(props){
+        super(props)
+        this.validateForm=this.validateForm.bind(this);
+    }
+
+     validateForm(event) {
+
+        var commentForm = document.getElementById('commentForm');
+
+         if (commentForm.comments.value === '') {
+             window.alert('Please leave your comment!');
+             commentForm.comments.focus() ;
+             return false;
+         }
+     }
+
+
     render(){
         return(
             <form>
-
                 <select>
-                    <option>Bary</option>
-                    <option>Restauracje</option>
+                    <option>Bar</option>
+                    <option>Restaurant</option>
                     <option>Fast-Food</option>
-                    <option>Dyskoteki</option>
+                    <option>Disco</option>
                 </select>
-                <input type="text" placeholder="Nazwa lokalu"/>
-                <input type="text" placeholder="Adres"/>
-                <input type="text" placeholder="Strona Internetowa"/>
-                <input type="text" placeholder="Email"/>
-                <input type="text" placeholder="Telefon"/>
-                <input type="submit" value="Dodaj"/>
+                <input type="text" placeholder="Name"/>
+                <input type="text" placeholder="Adress"/>
+                <input id="commentForm" type="text" placeholder="Webside"/>
+                <input type="submit" value="Add"/>
             </form>
         )
     }
