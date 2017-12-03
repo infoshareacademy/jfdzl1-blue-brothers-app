@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { LineChart, Line, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis, Legend, Tooltip } from 'recharts';
 import { Col, Row, Grid } from 'react-bootstrap'
 
 
@@ -15,31 +15,17 @@ class Stats extends Component{
                     <Row>
                         <Col xs={4} >
                             <h2> Visitor </h2>
-                            <LineChart width={300} height={200} data={data}>
-                                <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-                                <XAxis dataKey="name" stroke="#8884d8" />
+                            <BarChart width={730} height={250} data={data}>
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <XAxis dataKey="name" />
                                 <YAxis />
-                            </LineChart>
+                                <Tooltip />
+                                <Legend />
+                                <Bar dataKey="pv" fill="#8884d8" />
+                                <Bar dataKey="uv" fill="#82ca9d" />
+                            </BarChart>
                         </Col>
-
-
-                        <Col xs={4} >
-                            <h2> Bars </h2>
-                            <LineChart width={300} height={200} data={dataBars}>
-                                <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-                                <XAxis dataKey="name" stroke="#8884d8" />
-                                <YAxis />
-                            </LineChart>
-                        </Col>
-
-                        <Col xs={4} >
-                            <h2> Customers </h2>
-                            <LineChart width={300} height={200} data={dataCustomers}>
-                                <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-                                <XAxis dataKey="name" stroke="#8884d8" />
-                                <YAxis />
-                            </LineChart>
-                        </Col>
+                        
                     </Row>
                 </Grid>
             </div>
