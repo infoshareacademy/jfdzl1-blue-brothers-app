@@ -6,7 +6,9 @@ class Sidebar extends Component{
         return(
             <div>
                 Sidebar
+                <li><Link to="/">Home</Link></li>
                 <li><Link to="/stats">Stats</Link></li>
+
             </div>
         )
     }
