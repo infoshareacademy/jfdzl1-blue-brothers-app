@@ -12,7 +12,7 @@ class Stats extends Component {
     render() {
         const {classes} = this.props;
         const {alignItems, direction, justify} = this.state;
-        
+
         return (
 
             <div>

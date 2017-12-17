@@ -3,6 +3,29 @@ import {LineChart, Line, XAxis, YAxis} from 'recharts';
 import Grid from 'material-ui/Grid';
 import Paper from 'material-ui/Paper';
 import Button from 'material-ui/Button'
+import Tabs, {Tab} from 'material-ui/Tabs';
+import PhoneIcon from 'material-ui-icons/Phone';
+import PersonPinIcon from 'material-ui-icons/PersonPin';
+import HelpIcon from 'material-ui-icons/Help';
+import ShoppingBasket from 'material-ui-icons/ShoppingBasket';
+import ThumbDown from 'material-ui-icons/ThumbDown';
+import ThumbUp from 'material-ui-icons/ThumbUp';
+import Typography from 'material-ui/Typography';
+import AppBar from 'material-ui/AppBar';
+import PropTypes from 'prop-types';
+
+
+function TabContainer(props) {
+    return (
+        <Typography component="div" style={{padding: 8 * 3}}>
+            {props.children}
+        </Typography>
+    );
+}
+
+TabContainer.propTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 class Dashboard extends Component {
 
@@ -12,9 +35,13 @@ class Dashboard extends Component {
         alignItems: 'center',
     };
 
+    handleChange = (event, value) => {
+        this.setState({ value });
+    };
+
     render() {
-        const {classes} = this.props;
         const {alignItems, direction, justify} = this.state;
+        const {value} = this.state;
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -25,13 +52,32 @@ class Dashboard extends Component {
                         justify={justify}
                     >
                         <Paper>
-                            <h1>PubFinder</h1>
-                            <h2>Wyszukiwarka najlepszych lokali w Twojej okolicy</h2>
-                            <h3>Uruchom aplikację i wyszukaj lokal idealny dla Ciebie!! </h3>
-                            <div style={{textAlign: "center"}}>
-                                <Button raised color="primary"
-                                        style={{textAlign: "center", fontSize: 32}}>Start</Button>
-                            </div>
+
+                            <div>
+                                <AppBar position="static">
+                                    <Tabs value={value} onChange={this.handleChange} scrollable scrollButtons="off">
+                                        <Tab icon={<PhoneIcon/>}/>
+                                        <Tab icon={<HelpIcon/>}/>
+                                        <Tab icon={<ThumbDown/>}/>
+                                        <Tab icon={<ThumbUp/>}/>
+                                    </Tabs>
+                                </AppBar>
+                                <h1>PubFinder</h1>
+                                <h2>Wyszukiwarka najlepszych lokali w Twojej okolicy</h2>
+                                <h3>Uruchom aplikację i wyszukaj lokal idealny dla Ciebie!! </h3>
+
+                                <Typography>
+                                    {value === 0 && <TabContainer>Item One</TabContainer>}
+                                    {value === 1 && <TabContainer>Item Two</TabContainer>}
+                                    {value === 2 && <TabContainer>Item Three</TabContainer>}
+                                    {value === 3 && <TabContainer>Item Four</TabContainer>}
+                                </Typography>
+                                </div>
+                                    <div style={{textAlign: "center"}}>
+                                    <Button raised color="primary"
+                                            style={{textAlign: "center", fontSize: 32}}>Start</Button>
+                                </div>
+
                         </Paper>
                     </Grid>
                 </Grid>
