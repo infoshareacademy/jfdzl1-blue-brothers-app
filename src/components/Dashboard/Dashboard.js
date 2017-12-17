@@ -1,17 +1,19 @@
 import React, {Component} from 'react';
 import {LineChart, Line, XAxis, YAxis} from 'recharts';
 import Grid from 'material-ui/Grid';
+import Paper from 'material-ui/Paper';
 
 class Dashboard extends Component {
   render() {
     return (
       <Grid item xs={12}>
-
         <Grid item xs={8}>
-          <h1>PubFinder</h1>
-          <h2>Wyszukiwarka najlepszych lokali w Twojej okolicy</h2>
-          <h3>Uruchom aplikację i wyszukaj lokal idealny dla Ciebie!! </h3>
-          <button style={buttonStyle}>Start</button>
+          <Paper>
+            <h1>PubFinder</h1>
+            <h2>Wyszukiwarka najlepszych lokali w Twojej okolicy</h2>
+            <h3>Uruchom aplikację i wyszukaj lokal idealny dla Ciebie!! </h3>
+            <button style={buttonStyle}>Start</button>
+          </Paper>
         </Grid>
 
         <Grid item xs={4}>
