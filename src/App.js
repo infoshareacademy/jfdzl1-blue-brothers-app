@@ -15,22 +15,18 @@ import Stats from './components/Stats';
 
 class App extends Component {
   render() {
-    const { classes } = this.props;
+    const {classes} = this.props;
     return (
       <Router>
         <div className={classes.root}>
-          <Grid container>
-            <Grid item xs={12}>
-              <Grid container className={classes.items}>
-                  <Appbar/>
-                  <Sidebar/>
-                  <Route path="/" component={Dashboard}/>
-                  <Route path="/" component={List}/>
-                  <Route path="/" component={Form}/>
-                  <Route path="/stats" component={Stats}/>
-                  <Footer/>
-              </Grid>
-            </Grid>
+          <Grid container className={classes.items}>
+            <Appbar/>
+            <Sidebar/>
+            <Route path="/" component={Dashboard}/>
+            <Route path="/" component={List}/>
+            <Route path="/" component={Form}/>
+            <Route path="/stats" component={Stats}/>
+            <Footer/>
           </Grid>
         </div>
       </Router>
