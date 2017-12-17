@@ -9,7 +9,7 @@ import Appbar from './components/Appbar';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import Form from './components/Form';
-import List from './components/List';
+import LocalsList from './components/LocalsList';
 import Footer from './components/Footer';
 import Stats from './components/Stats';
 
@@ -22,10 +22,10 @@ class App extends Component {
           <Grid container className={classes.items}>
             <Appbar/>
             <Sidebar/>
-            <Route path="/" component={Dashboard}/>
-            <Route path="/" component={List}/>
-            <Route path="/" component={Form}/>
-            <Route path="/stats" component={Stats}/>
+            <Route exact path="/" component={Dashboard}/>
+            <Route exact path="/LocalsList" component={LocalsList}/>
+            <Route exact path="/" component={Form}/>
+            <Route exact path="/stats" component={Stats}/>
             <Footer/>
           </Grid>
         </div>
