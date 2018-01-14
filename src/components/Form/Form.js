@@ -21,16 +21,16 @@ class Form extends Component{
     render(){
         return(
             <form>
+                <input type="text" placeholder="Adress"/>
+                <input type="text" placeholder="Name"/>
                 <select>
                     <option>Bar</option>
                     <option>Restaurant</option>
                     <option>Fast-Food</option>
                     <option>Disco</option>
                 </select>
-                <input type="text" placeholder="Name"/>
-                <input type="text" placeholder="Adress"/>
-                <input id="commentForm" type="text" placeholder="Webside"/>
                 <input type="submit" value="Add"/>
+                <input id="commentForm" type="text" placeholder="Webside"/>
             </form>
         )
     }
