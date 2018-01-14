@@ -1,3 +1,4 @@
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
@@ -99,6 +100,7 @@ class MenuAppBar extends React.Component {
             </div>
         );
     }
+
 }
 
 MenuAppBar.propTypes = {
