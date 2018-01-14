@@ -60,11 +60,9 @@ class MenuAppBar extends React.Component {
               </FormGroup>
               <AppBar position="static">
                 <Toolbar>
-                  <IconButton onClick={this.handleMenu} className={classes.menuButton} color="contrast" aria-label="Menu">
-                    <MenuIcon />
-                  </IconButton>
+
                   <Typography type="title" color="inherit" className={classes.flex}>
-                    PubFinder Application
+                    Blue Brothers App
                   </Typography>
                     {auth && (
                         <div>
