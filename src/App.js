@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import PropTypes from 'prop-types';
@@ -23,20 +23,20 @@ class App extends Component {
     return (
       <Provider store={store}>
         <ConnectedRouter history={history}>
-          <Switch>
+          <div>
             <div className={classes.root}>
               <Grid container className={classes.items}>
                 <Appbar/>
                 <Sidebar/>
                 <Route path="/" component={Dashboard}/>
-                <Route path="/" component={List}/>
-                <Route path="/" component={Form}/>
+                <Route path="/list" component={List}/>
+                <Route path="/form" component={Form}/>
                 <Route path="/stats" component={Stats}/>
                 <Footer/>
               </Grid>
-              <Notifications/>
             </div>
-          </Switch>
+            <Notifications/>
+          </div>
         </ConnectedRouter>
       </Provider>
     );

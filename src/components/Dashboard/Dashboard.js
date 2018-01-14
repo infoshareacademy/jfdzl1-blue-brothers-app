@@ -7,9 +7,7 @@ import Paper from 'material-ui/Paper';
 import Button from 'material-ui/Button'
 import Tabs, {Tab} from 'material-ui/Tabs';
 import PhoneIcon from 'material-ui-icons/Phone';
-import PersonPinIcon from 'material-ui-icons/PersonPin';
 import HelpIcon from 'material-ui-icons/Help';
-import ShoppingBasket from 'material-ui-icons/ShoppingBasket';
 import ThumbDown from 'material-ui-icons/ThumbDown';
 import ThumbUp from 'material-ui-icons/ThumbUp';
 import Typography from 'material-ui/Typography';
@@ -42,6 +40,7 @@ class Dashboard extends Component {
         direction: 'row',
         justify: 'center',
         alignItems: 'center',
+        value: 0
     };
 
     handleChange = (event, value) => {
@@ -163,13 +162,5 @@ const dataCustomers = [
     {name: 'May', uv: 4000, pv: 2000, amt: 2000},
 
 ];
-
-const buttonStyle = {
-    backgroundColor: 'red',
-    color: 'white',
-    fontSize: 20
-
-};
-
 
 export default connect(null, mapDispatchToProps)(Dashboard);
