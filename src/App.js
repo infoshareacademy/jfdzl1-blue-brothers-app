@@ -24,8 +24,8 @@ class App extends Component {
       <Provider store={store}>
         <ConnectedRouter history={history}>
           <Switch>
-            <div>
-              <Grid container>
+            <div className={classes.root}>
+              <Grid container className={classes.items}>
                 <Appbar/>
                 <Sidebar/>
                 <Route path="/" component={Dashboard}/>
@@ -43,8 +43,8 @@ class App extends Component {
   }
 }
 
-// App.propTypes = {
-//   classes: PropTypes.object.isRequired,
-// };
+App.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
-export default App;
+export default withStyles(theme)(App);
