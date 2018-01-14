@@ -29,8 +29,9 @@ class Form extends Component{
                     <option>Fast-Food</option>
                     <option>Disco</option>
                 </select>
-                <input type="submit" value="Add"/>
+                <input type="text" placeholder="Name"/>
                 <input id="commentForm" type="text" placeholder="Webside"/>
+                <input type="submit" value="Add"/>
             </form>
         )
     }
