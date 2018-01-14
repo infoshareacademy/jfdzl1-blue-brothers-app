@@ -11,6 +11,7 @@ import AccountCircle from 'material-ui-icons/AccountCircle';
 import Switch from 'material-ui/Switch';
 import { FormControlLabel, FormGroup } from 'material-ui/Form';
 import Menu, { MenuItem } from 'material-ui/Menu';
+import Avatar from 'react-avatar';
 
 const styles = {
     root: {
@@ -60,11 +61,11 @@ class MenuAppBar extends React.Component {
               </FormGroup>
               <AppBar position="static">
                 <Toolbar>
-                  <IconButton className={classes.menuButton} color="contrast" aria-label="Menu">
+                  <IconButton onClick={this.handleMenu} className={classes.menuButton} color="contrast" aria-label="Menu">
                     <MenuIcon />
                   </IconButton>
                   <Typography type="title" color="inherit" className={classes.flex}>
-                    PubFinder
+                    PubFinder Application
                   </Typography>
                     {auth && (
                         <div>
@@ -72,9 +73,9 @@ class MenuAppBar extends React.Component {
                               aria-owns={open ? 'menu-appbar' : null}
                               aria-haspopup="true"
                               onClick={this.handleMenu}
-                              color="contrast"
+
                           >
-                            <AccountCircle />
+                              <Avatar facebookId="100008343750912" size="50" />
                           </IconButton>
                           <Menu
                               id="menu-appbar"
@@ -90,8 +91,9 @@ class MenuAppBar extends React.Component {
                               open={open}
                               onClose={this.handleClose}
                           >
-                            <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-                            <MenuItem onClick={this.handleClose}>My account</MenuItem>
+                            <MenuItem onClick={this.handleClose}>Change email</MenuItem>
+                            <MenuItem onClick={this.handleClose}>Change password</MenuItem>
+                            <MenuItem onClick={this.handleClose}>Logout</MenuItem>
                           </Menu>
                         </div>
                     )}
