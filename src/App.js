@@ -5,7 +5,6 @@ import { ConnectedRouter } from 'react-router-redux';
 import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
-
 import theme from './theme';
 import Appbar from './components/Appbar';
 import Sidebar from './components/Sidebar';
