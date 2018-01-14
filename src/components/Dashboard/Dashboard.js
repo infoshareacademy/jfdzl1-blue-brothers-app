@@ -1,19 +1,20 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+
 import {LineChart, Line, XAxis, YAxis} from 'recharts';
 import Grid from 'material-ui/Grid';
 import Paper from 'material-ui/Paper';
 import Button from 'material-ui/Button'
 import Tabs, {Tab} from 'material-ui/Tabs';
 import PhoneIcon from 'material-ui-icons/Phone';
-import PersonPinIcon from 'material-ui-icons/PersonPin';
 import HelpIcon from 'material-ui-icons/Help';
-import ShoppingBasket from 'material-ui-icons/ShoppingBasket';
 import ThumbDown from 'material-ui-icons/ThumbDown';
 import ThumbUp from 'material-ui-icons/ThumbUp';
 import Typography from 'material-ui/Typography';
 import AppBar from 'material-ui/AppBar';
 import PropTypes from 'prop-types';
 
+import { showNotification } from '../../UI/logic';
 
 function TabContainer(props) {
     return (
@@ -27,12 +28,19 @@ TabContainer.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
+const mapDispatchToProps = dispatch => {
+    return {
+        showSnackbar: (message) => dispatch(showNotification('Hello iSA :)'))
+    }
+}
+
 class Dashboard extends Component {
 
     state = {
         direction: 'row',
         justify: 'center',
         alignItems: 'center',
+        value: 0
     };
 
     handleChange = (event, value) => {
@@ -52,7 +60,9 @@ class Dashboard extends Component {
                         justify={justify}
                     >
                         <Paper>
-
+                            <div>
+                                <button onClick={this.props.showSnackbar}>CLICK ME!</button>
+                            </div>
                             <div>
                                 <AppBar position="static">
                                     <Tabs value={value} onChange={this.handleChange} scrollable scrollButtons="off">
@@ -153,12 +163,4 @@ const dataCustomers = [
 
 ];
 
-const buttonStyle = {
-    backgroundColor: 'red',
-    color: 'white',
-    fontSize: 20
-
-};
-
-
-export default Dashboard;
+export default connect(null, mapDispatchToProps)(Dashboard);
