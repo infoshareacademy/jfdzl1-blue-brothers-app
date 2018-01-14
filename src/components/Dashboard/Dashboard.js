@@ -13,6 +13,7 @@ import ThumbUp from 'material-ui-icons/ThumbUp';
 import Typography from 'material-ui/Typography';
 import AppBar from 'material-ui/AppBar';
 import PropTypes from 'prop-types';
+import logo from './clubfinder.png'
 
 import { showNotification } from '../../UI/logic';
 
@@ -70,9 +71,12 @@ class Dashboard extends Component {
                                         <Tab icon={<HelpIcon/>}/>
                                         <Tab icon={<ThumbDown/>}/>
                                         <Tab icon={<ThumbUp/>}/>
+
                                     </Tabs>
                                 </AppBar>
-                                <h1>PubFinder</h1>
+                                <div>
+                                    <img src={logo}/>
+                                </div>
                                 <h2>Wyszukiwarka najlepszych lokali w Twojej okolicy</h2>
                                 <h3>Uruchom aplikację i wyszukaj lokal idealny dla Ciebie!! </h3>
 
@@ -87,6 +91,7 @@ class Dashboard extends Component {
                                     <Button raised color="primary"
                                             style={{textAlign: "center", fontSize: 32}}>Start</Button>
                                 </div>
+
 
                         </Paper>
                     </Grid>
