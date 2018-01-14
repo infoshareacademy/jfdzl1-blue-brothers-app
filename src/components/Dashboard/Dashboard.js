@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+
 import {LineChart, Line, XAxis, YAxis} from 'recharts';
 import Grid from 'material-ui/Grid';
 import Paper from 'material-ui/Paper';
@@ -14,6 +16,7 @@ import Typography from 'material-ui/Typography';
 import AppBar from 'material-ui/AppBar';
 import PropTypes from 'prop-types';
 
+import { showNotification } from '../../UI/logic';
 
 function TabContainer(props) {
     return (
@@ -26,6 +29,12 @@ function TabContainer(props) {
 TabContainer.propTypes = {
     children: PropTypes.node.isRequired,
 };
+
+const mapDispatchToProps = dispatch => {
+    return {
+        showSnackbar: (message) => dispatch(showNotification('Hello iSA :)'))
+    }
+}
 
 class Dashboard extends Component {
 
@@ -52,7 +61,9 @@ class Dashboard extends Component {
                         justify={justify}
                     >
                         <Paper>
-
+                            <div>
+                                <button onClick={this.props.showSnackbar}>CLICK ME!</button>
+                            </div>
                             <div>
                                 <AppBar position="static">
                                     <Tabs value={value} onChange={this.handleChange} scrollable scrollButtons="off">
@@ -161,4 +172,4 @@ const buttonStyle = {
 };
 
 
-export default Dashboard;
+export default connect(null, mapDispatchToProps)(Dashboard);

@@ -14,6 +14,7 @@ import Form from './components/Form';
 import List from './components/List';
 import Footer from './components/Footer';
 import Stats from './components/Stats';
+import Notifications from './UI/Notifications';
 import { store, history } from './store';
 
 class App extends Component {
@@ -23,8 +24,8 @@ class App extends Component {
       <Provider store={store}>
         <ConnectedRouter history={history}>
           <Switch>
-            <div className={classes.root}>
-              <Grid container className={classes.items}>
+            <div>
+              <Grid container>
                 <Appbar/>
                 <Sidebar/>
                 <Route path="/" component={Dashboard}/>
@@ -33,6 +34,7 @@ class App extends Component {
                 <Route path="/stats" component={Stats}/>
                 <Footer/>
               </Grid>
+              <Notifications/>
             </div>
           </Switch>
         </ConnectedRouter>
@@ -41,8 +43,8 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
+// App.propTypes = {
+//   classes: PropTypes.object.isRequired,
+// };
 
-export default withStyles(theme)(App);
+export default App;
