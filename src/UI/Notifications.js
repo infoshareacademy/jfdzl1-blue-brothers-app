@@ -7,19 +7,15 @@ import { withStyles } from 'material-ui/styles';
 
 import { hideNotification } from './logic';
 
-function mapStateToProps(state) {
-  return {
-    open: state.ui.notifications.open,
-    message: state.ui.notifications.message,
-    autoHideDuration: 3000
-  };
-}
+const mapStateToProps = (state) => ({
+  open: state.ui.notifications.open,
+  message: state.ui.notifications.message,
+  autoHideDuration: 3000
+});
 
-function mapDispatchToProps(dispatch) {
-  return {
-    handleClose: () => dispatch(hideNotification())
-  };
-}
+const mapDispatchToProps = (dispatch) => ({
+  handleClose: () => dispatch(hideNotification())
+});
 
 const styles = theme => ({
   close: {
