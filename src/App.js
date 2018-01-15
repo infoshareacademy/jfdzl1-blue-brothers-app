@@ -28,7 +28,7 @@ class App extends Component {
                 <Appbar/>
                 <Sidebar/>
                 <Route path="/" component={Dashboard}/>
-                <Route path="/list" component={List}/>
+                <Route path="/list" component={LocalsList}/>
                 <Route path="/form" component={Form}/>
                 <Route path="/stats" component={Stats}/>
                 <Footer/>
