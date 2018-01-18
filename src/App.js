@@ -26,14 +26,14 @@ class App extends Component {
             <div className={classes.root}>
               <Grid container className={classes.items}>
                 <Appbar/>
-                <Sidebar/>
-                <Route path="/" component={Dashboard}/>
+                <Route exact path="/" component={Dashboard}/>
                 <Route path="/list" component={LocalsList}/>
                 <Route path="/form" component={Form}/>
                 <Route path="/stats" component={Stats}/>
                 <Footer/>
               </Grid>
             </div>
+            <Sidebar/>
             <Notifications/>
           </div>
         </ConnectedRouter>
