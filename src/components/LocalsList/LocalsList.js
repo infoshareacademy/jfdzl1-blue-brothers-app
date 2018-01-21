@@ -1,31 +1,38 @@
 import React, {Component} from 'react';
-import {database} from '../../firebase'
+import {connect} from 'react-redux';
 
+import {init} from './state';
+
+const mapStateToProps = state => ({
+  locals: state.locals.list
+});
+
+const mapDispatchToProps = dispatch => ({
+  initData: () => dispatch(init())
+});
 
 class LocalsList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            locals: null
-        }
-    }
 
-    componentDidMount() {
-       database.ref('/locals')
-           .on('value', snapshot => {
-               this.setState({
-                   locals: snapshot.val()
-               })
-           })
-    }
+  componentWillMount() {
+    this.props.initData();
+  }
 
-    render() {
-        return (
-            <div>
-
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <ul>
+          {this.props.locals.map(local => (
+            <li key={local.id}>
+              {local.name}, {local.address}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
 }
 
-export default LocalsList;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(LocalsList);

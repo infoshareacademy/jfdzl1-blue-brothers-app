@@ -32,20 +32,20 @@ const Sidebar = (props) => (
             <ListItemText primary="Dashboard"/>
           </ListItem>
         </Link>
-        <Link to="/path1">
+        <Link to="/list">
           <ListItem button>
             <ListItemIcon>
               <FaDaschbord/>
             </ListItemIcon>
-            <ListItemText primary="Link1"/>
+            <ListItemText primary="Locals"/>
           </ListItem>
         </Link>
-        <Link to="/path2">
+        <Link to="/add">
           <ListItem button>
             <ListItemIcon>
               <FaDaschbord/>
             </ListItemIcon>
-            <ListItemText primary="Link2"/>
+            <ListItemText primary="Add local"/>
           </ListItem>
         </Link>
         <Link to="/path3">

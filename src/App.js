@@ -14,6 +14,7 @@ import LocalsList from './components/LocalsList';
 import Footer from './components/Footer';
 import Stats from './components/Stats';
 import Notifications from './UI/Notifications';
+import LocalAdd from './components/LocalAdd';
 import { store, history } from './store';
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
                 <Appbar/>
                 <Route exact path="/" component={Dashboard}/>
                 <Route path="/list" component={LocalsList}/>
+                <Route path="/add" component={LocalAdd}/>
                 <Route path="/form" component={Form}/>
                 <Route path="/stats" component={Stats}/>
                 <Footer/>
