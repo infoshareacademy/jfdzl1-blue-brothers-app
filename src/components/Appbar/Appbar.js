@@ -72,7 +72,7 @@ class MenuAppBar extends React.Component {
               <MenuIcon />
             </IconButton>
             <Typography type="title" color="inherit" className={classes.flex}>
-              PubFinder Application
+              cLubFinder Application
             </Typography>
             {auth && (
               <div>
