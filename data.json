@@ -1,0 +1,40 @@
+{
+  "locals": {
+    "uid": "U Szewca",
+    "type": "restaurant",
+    "name": "Pub u Szewca",
+    "weebside": "http://www.uszewca.pl/",
+    "address": "Grodzka 18, 20-112 Lublin"
+  }
+{
+  "uid": "Dziki Wschód",
+  "type": "bar",
+  "name": "Dziki Wschód",
+  "weebside": "http://www.uszewca.pl/",
+  "address": "Jasna 7, 20-077 Lublin"
+},
+{
+"uid": "Trybunalska",
+"type": "restauracja",
+"name": "Trybunalska Lublin City Pub",
+"weebside": "http://www.trybunalska.pl/",
+"address": "Rynek 4, 20-001 Lublin"
+},
+{
+"uid": "Mandragora",
+"type": "restauracja",
+"name": "Żydowska Restauracja Mandragoran",
+"weebside": "http://www.mandragora.lublin.pl/en",
+"address": "Rynek 9, 20-400 Lublin"
+},
+{
+"uid": "Czarcia Łapa",
+"type": "restauracja",
+"name": "Czarcia Łapa",
+"weebside": "http://czarcialapa.squarespace.com/",
+"adress": "Rynek 19, Lublin, Lublin"
+},
+{
+},
+]
+}

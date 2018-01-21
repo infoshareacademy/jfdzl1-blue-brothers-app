@@ -10,7 +10,7 @@ import Appbar from './components/Appbar';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import Form from './components/Form';
-import List from './components/List';
+import LocalsList from './components/LocalsList';
 import Footer from './components/Footer';
 import Stats from './components/Stats';
 import Notifications from './UI/Notifications';
@@ -26,18 +26,19 @@ class App extends Component {
             <div className={classes.root}>
               <Grid container className={classes.items}>
                 <Appbar/>
-                <Sidebar/>
-                <Route path="/" component={Dashboard}/>
-                <Route path="/list" component={List}/>
+                <Route exact path="/" component={Dashboard}/>
+                <Route path="/list" component={LocalsList}/>
                 <Route path="/form" component={Form}/>
                 <Route path="/stats" component={Stats}/>
                 <Footer/>
               </Grid>
             </div>
+            <Sidebar/>
             <Notifications/>
           </div>
         </ConnectedRouter>
       </Provider>
+
     );
   }
 }
