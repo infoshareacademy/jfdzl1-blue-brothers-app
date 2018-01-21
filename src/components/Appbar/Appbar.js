@@ -79,9 +79,8 @@ class MenuAppBar extends React.Component {
                 <IconButton
                   aria-owns={open ? 'menu-appbar' : null}
                   aria-haspopup="true"
-                  onClick={this.handleMenu}
-
-                >
+                  onClick={this.handleMenu}>
+      
                   <Avatar facebookId="100008343750912" size="50"/>
                 </IconButton>
                 <Menu
@@ -109,7 +108,6 @@ class MenuAppBar extends React.Component {
       </div>
     );
   }
-
 }
 
 MenuAppBar.propTypes = {
