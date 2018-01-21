@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
 
@@ -43,6 +44,7 @@ class LocalAdd extends React.Component {
         <div>
           <input type="submit" value="Add"/>
         </div>
+        <Link to="/list">Back to list</Link>
       </form>
     );
   }

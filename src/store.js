@@ -4,8 +4,10 @@ import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
 import uiReducer from './UI/logic';
 import localsReducer from './components/LocalsList/state';
+import localReducer from './components/Local/state';
 
 const reducer = combineReducers({
+  local: localReducer,
   locals: localsReducer,
   ui: uiReducer,
   routing: routerReducer,

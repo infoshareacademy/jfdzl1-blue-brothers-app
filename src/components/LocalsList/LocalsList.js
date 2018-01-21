@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 
 import {init} from './state';
@@ -23,7 +24,7 @@ class LocalsList extends Component {
         <ul>
           {this.props.locals.map(local => (
             <li key={local.id}>
-              {local.name}, {local.address}
+              <Link to={`/local/${local.id}`}>{local.name}, {local.address}</Link>
             </li>
           ))}
         </ul>
