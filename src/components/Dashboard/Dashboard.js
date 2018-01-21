@@ -31,7 +31,7 @@ TabContainer.propTypes = {
 
 const mapDispatchToProps = dispatch => {
     return {
-        showSnackbar: (message) => dispatch(showNotification('Hello iSA :)'))
+        showSnackbar: (message) => dispatch(showNotification('App in progress. App coming soon!'))
     }
 }
 
@@ -61,13 +61,10 @@ class Dashboard extends Component {
                         justify={justify}
                     >
                         <Paper>
-                            <div>
-                                <button onClick={this.props.showSnackbar}>CLICK ME!</button>
-                            </div>
+                           
                             <div>
                                 <AppBar position="static">
                                     <Tabs value={value} onChange={this.handleChange} scrollable scrollButtons="off">
-                                        <Tab icon={<PhoneIcon/>}/>
                                         <Tab icon={<HelpIcon/>}/>
                                         <Tab icon={<ThumbDown/>}/>
                                         <Tab icon={<ThumbUp/>}/>
@@ -88,7 +85,7 @@ class Dashboard extends Component {
                                 </Typography>
                                 </div>
                                     <div style={{textAlign: "center"}}>
-                                    <Button raised color="primary"
+                                    <Button onClick={this.props.showSnackbar} raised color="primary"
                                             style={{textAlign: "center", fontSize: 32}}>Start</Button>
                                 </div>
 
