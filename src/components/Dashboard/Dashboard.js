@@ -66,7 +66,7 @@ class Dashboard extends Component {
 
                                 <AppBar position="static">
                                     <Tabs>
-                                        <h1> Made by Blue-Brothers Team</h1>
+                                        <h1> App made by Blue-Brothers Team</h1>
                                     </Tabs>
                                 </AppBar>
 
