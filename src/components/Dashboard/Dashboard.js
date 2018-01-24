@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
-import {LineChart, Line, XAxis, YAxis} from 'recharts';
+import {LineChart, BarChart, Bar, Line, XAxis, YAxis, PieChart, Pie,} from 'recharts';
 import Grid from 'material-ui/Grid';
 import Paper from 'material-ui/Paper';
 import Button from 'material-ui/Button'
@@ -63,26 +63,20 @@ class Dashboard extends Component {
                         <Paper>
 
                             <div>
-                                <AppBar position="static">
-                                    <Tabs value={value} onChange={this.handleChange} scrollable scrollButtons="off">
-                                        <Tab icon={<HelpIcon/>}/>
-                                        <Tab icon={<ThumbDown/>}/>
-                                        <Tab icon={<ThumbUp/>}/>
 
+                                <AppBar position="static">
+                                    <Tabs>
+                                        <h1> Made by Blue-Brothers Team</h1>
                                     </Tabs>
                                 </AppBar>
+
                                 <div>
                                     <img src={logo}/>
                                 </div>
                                 <h2>Wyszukiwarka najlepszych lokali w Twojej okolicy</h2>
                                 <h3>Uruchom aplikację i wyszukaj lokal idealny dla Ciebie!! </h3>
 
-                                <Typography>
-                                    {value === 0 && <TabContainer>Item One</TabContainer>}
-                                    {value === 1 && <TabContainer>Item Two</TabContainer>}
-                                    {value === 2 && <TabContainer>Item Three</TabContainer>}
-                                    {value === 3 && <TabContainer>Item Four</TabContainer>}
-                                </Typography>
+
                                 </div>
                                     <div style={{textAlign: "center"}}>
                                     <Button onClick={this.props.showSnackbar} raised color="primary"
@@ -105,11 +99,13 @@ class Dashboard extends Component {
 
                         <Grid item xs={3}>
                             <h2> Visitor </h2>
-                            <LineChart width={300} height={200} data={data}>
+                            <BarChart width={300} height={200} data={data}>
                                 <Line type="monotone" dataKey="uv" stroke="#8884d8"/>
                                 <XAxis dataKey="name" stroke="#8884d8"/>
                                 <YAxis/>
-                            </LineChart>
+                                <Bar dataKey="pv" fill="#8884d8" />
+                                <Bar dataKey="uv" fill="#82ca9d" />
+                            </BarChart>
                         </Grid>
 
 
@@ -124,11 +120,10 @@ class Dashboard extends Component {
 
                         <Grid item xs={3}>
                             <h2> Customers </h2>
-                            <LineChart width={300} height={200} data={dataCustomers}>
-                                <Line type="monotone" dataKey="uv" stroke="#8884d8"/>
-                                <XAxis dataKey="name" stroke="#8884d8"/>
-                                <YAxis/>
-                            </LineChart>
+                            <PieChart width={300} height={200}>
+                                <Pie data={dataCustomers} dataKey="uv" nameKey="name" cx="50%" cy="50%" outerRadius={30} fill="#8884d8" />
+                                <Pie data={data} dataKey="uv" nameKey="name" cx="50%" cy="50%" innerRadius={40} outerRadius={60} fill="#82ca9d" label />
+                            </PieChart>
                         </Grid>
                     </Grid>
                 </Grid>
