@@ -48,21 +48,15 @@ class Dashboard extends Component {
     const {alignItems, direction, justify} = this.state;
     const {value} = this.state;
     return (
-      <Grid container spacing={24}>
+
         <Grid item xs={12}>
-          <Grid
-            container
-            alignItems={alignItems}
-            direction={direction}
-            justify={justify}
-          >
+
             <Paper>
 
-              <div>
+              <div style={{textAlign: "center"}}>
 
                 <AppBar position="static">
                   <Tabs>
-                    <h1> App made by Blue-Brothers Team</h1>
                   </Tabs>
                 </AppBar>
 
@@ -81,8 +75,6 @@ class Dashboard extends Component {
 
 
             </Paper>
-          </Grid>
-        </Grid>
 
 
         <Grid container spacing={24}>
