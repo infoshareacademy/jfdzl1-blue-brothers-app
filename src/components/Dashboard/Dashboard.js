@@ -10,6 +10,7 @@ import Typography from 'material-ui/Typography';
 import AppBar from 'material-ui/AppBar';
 import PropTypes from 'prop-types';
 import logo from './clubfinder.png'
+import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 
 import {showNotification} from '../../UI/logic';
 
@@ -56,8 +57,7 @@ class Dashboard extends Component {
               <div style={{textAlign: "center"}}>
 
                 <AppBar position="static">
-                  <Tabs>
-                  </Tabs>
+                 
                 </AppBar>
 
                 <div>
@@ -75,9 +75,18 @@ class Dashboard extends Component {
 
 
             </Paper>
-
-
-        <Grid container spacing={24}>
+          <Grid
+            container
+            alignItems={alignItems}
+            direction={direction}
+            justify={justify}
+          >
+          <CardContent>
+            <Typography type="headline" component="h2">
+              Statystki aplikacji
+            </Typography>
+          </CardContent>
+          </Grid>
           <Grid
             container
             alignItems={alignItems}
@@ -119,7 +128,7 @@ class Dashboard extends Component {
             </Paper>
           </Grid>
         </Grid>
-      </Grid>
+
     )
   }
 }
