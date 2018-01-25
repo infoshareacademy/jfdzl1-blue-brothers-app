@@ -34,7 +34,6 @@ class App extends Component {
                 <Route path="/add" component={LocalAdd}/>
                 <Route path="/form" component={Form}/>
                 <Route path="/stats" component={Stats}/>
-                <Footer/>
               </Grid>
             </div>
             <Sidebar/>

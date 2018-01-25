@@ -13,6 +13,7 @@ import Switch from 'material-ui/Switch';
 import {FormControlLabel, FormGroup} from 'material-ui/Form';
 import Menu, {MenuItem} from 'material-ui/Menu';
 import Avatar from 'react-avatar';
+import Tooltip from 'material-ui/Tooltip';
 
 const styles = {
   root: {
@@ -60,14 +61,17 @@ class MenuAppBar extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
+            <Tooltip id="tooltip-icon" title="Menu">
             <IconButton onClick={this.props.toggleSidebar} className={classes.menuButton} color="contrast" aria-label="Menu">
               <MenuIcon />
             </IconButton>
+            </Tooltip>
             <Typography type="title" color="inherit" className={classes.flex}>
               cLubFinder Application
             </Typography>
             {auth && (
               <div>
+                <Tooltip id="tooltip-icon" title="Your Profile">
                 <IconButton
                   aria-owns={open ? 'menu-appbar' : null}
                   aria-haspopup="true"
@@ -75,6 +79,7 @@ class MenuAppBar extends React.Component {
       
                   <Avatar facebookId="100008343750912" size="50"/>
                 </IconButton>
+                </Tooltip>
                 <Menu
                   id="menu-appbar"
                   anchorEl={anchorEl}
