@@ -41,7 +41,7 @@ class LocalAdd extends React.Component {
                 <div>
                   <TextField placeholder="Name" name="name" onChange={this.handleChange}/>
                 </div>
-            
+
                 <div>
                   <TextField placeholder="Address" name="address" onChange={this.handleChange}/>
                 </div>
