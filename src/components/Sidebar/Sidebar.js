@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom';
 import Drawer from 'material-ui/Drawer';
 import List, {ListItem, ListItemIcon, ListItemText} from 'material-ui/List';
 import FaDaschbord from 'react-icons/lib/fa/dashboard';
+import FaCutlery from 'react-icons/lib/fa/cutlery'
+import FaPencil from 'react-icons/lib/fa/pencil'
 
 import {toggleSidebar} from './../../UI/logic';
 
@@ -35,7 +37,7 @@ const Sidebar = (props) => (
         <Link to="/list">
           <ListItem button>
             <ListItemIcon>
-              <FaDaschbord/>
+              <FaCutlery/>
             </ListItemIcon>
             <ListItemText primary="Locals"/>
           </ListItem>
@@ -43,17 +45,9 @@ const Sidebar = (props) => (
         <Link to="/add">
           <ListItem button>
             <ListItemIcon>
-              <FaDaschbord/>
+              <FaPencil/>
             </ListItemIcon>
             <ListItemText primary="Add local"/>
-          </ListItem>
-        </Link>
-        <Link to="/path3">
-          <ListItem button>
-            <ListItemIcon>
-              <FaDaschbord/>
-            </ListItemIcon>
-            <ListItemText primary="Link3"/>
           </ListItem>
         </Link>
       </List>
