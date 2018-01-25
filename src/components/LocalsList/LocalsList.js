@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 import Paper from 'material-ui/Paper'
 import Typography from 'material-ui/Typography';
+import FolderIcon from 'material-ui-icons/Folder';
+import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
+import StarIcon from 'material-ui-icons/Star';
+import FaCutlery from 'react-icons/lib/fa/cutlery'
+import Grid from 'material-ui/Grid';
+import Divider from 'material-ui/Divider';
 
 import {init} from './state';
 
@@ -22,19 +28,26 @@ class LocalsList extends Component {
 
   render() {
     return (
-      <div>
+      <Grid item xs={9}>
+
+        <div style={{textAlign: "center"}}>
         <Paper>
-        <ul>
+        <List>
           {this.props.locals.map(local => (
             <li key={local.id}>
               <Typography type="title" gutterBottom>
+                <ListItemIcon>
+                  <StarIcon />
+                </ListItemIcon>
               <Link to={`/local/${local.id}`}>{local.name}, {local.address}</Link>
               </Typography>
+              <Divider />
             </li>
           ))}
-        </ul>
+        </List>
         </Paper>
       </div>
+      </Grid>
     );
   }
 }
