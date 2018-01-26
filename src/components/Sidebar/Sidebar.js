@@ -8,7 +8,7 @@ import FaDaschbord from 'react-icons/lib/fa/dashboard';
 import FaCutlery from 'react-icons/lib/fa/cutlery'
 import FaPencil from 'react-icons/lib/fa/pencil'
 
-import {toggleSidebar} from './../../UI/state';
+import {toggleSidebar} from './../UI/state';
 
 const mapStateToProps = state => ({
   open: state.ui.sidebar.open

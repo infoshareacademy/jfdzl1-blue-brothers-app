@@ -11,7 +11,7 @@ import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import Form from './components/Form';
 import LocalsList from './components/LocalsList';
-import Notifications from './UI/Notifications';
+import Notifications from './components/UI/Notifications';
 import LocalAdd from './components/LocalAdd';
 import Local from './components/Local';
 import { store, history } from './store';

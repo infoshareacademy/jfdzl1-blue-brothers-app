@@ -4,7 +4,7 @@ import Grid from 'material-ui/Grid';
 
 import Hero from './Hero';
 import Stats from './Stats';
-import {showNotification} from '../../UI/state';
+import {showNotification} from '../UI/state';
 
 const mapDispatchToProps = dispatch => ({
   showSnackbar: (message) => dispatch(showNotification('App in progress. App coming soon!'))

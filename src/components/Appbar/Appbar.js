@@ -1,5 +1,5 @@
 import React from 'react';
-import {toggleSidebar} from '../../UI/state';
+import {toggleSidebar} from '../UI/state';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
