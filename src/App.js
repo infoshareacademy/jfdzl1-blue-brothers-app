@@ -5,6 +5,10 @@ import { ConnectedRouter } from 'react-router-redux';
 import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
+import Button from 'material-ui/Button';
+import AddIcon from 'material-ui-icons/Add';
+import {Link} from 'react-router-dom';
+
 import theme from './theme';
 import Appbar from './components/Appbar';
 import Sidebar from './components/Sidebar';
@@ -35,6 +39,11 @@ class App extends Component {
             </div>
             <Sidebar/>
             <Notifications/>
+            <Link to="/add">
+              <Button fab className={classes.fab}>
+                <AddIcon />
+              </Button>
+            </Link>
           </div>
         </ConnectedRouter>
       </Provider>
