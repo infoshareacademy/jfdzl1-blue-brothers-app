@@ -38,10 +38,10 @@ class LocalsList extends Component {
         <Paper style={styles.paper}>
           <List>
             {this.props.locals.map(local => (
-              <div>
-                <ListItem key={local.id} button>
+              <div key={local.id} >
+                <ListItem button>
                   <Link to={`/local/${local.id}`}>
-                    <ListItemText primary={`${local.name}, ${local.address}`}/>
+                    <ListItemText primary={local.name} secondary={local.address}/>
                   </Link>
                   <ListItemSecondaryAction>
                     <IconButton aria-label="Add to favorites">
