@@ -1,5 +1,5 @@
 import React from 'react';
-import {toggleSidebar} from '../../UI/logic';
+import {toggleSidebar} from '../../UI/state';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
@@ -8,9 +8,6 @@ import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
-import AccountCircle from 'material-ui-icons/AccountCircle';
-import Switch from 'material-ui/Switch';
-import {FormControlLabel, FormGroup} from 'material-ui/Form';
 import Menu, {MenuItem} from 'material-ui/Menu';
 import Avatar from 'react-avatar';
 import Tooltip from 'material-ui/Tooltip';

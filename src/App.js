@@ -11,8 +11,6 @@ import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import Form from './components/Form';
 import LocalsList from './components/LocalsList';
-import Footer from './components/Footer';
-import Stats from './components/Stats';
 import Notifications from './UI/Notifications';
 import LocalAdd from './components/LocalAdd';
 import Local from './components/Local';
@@ -33,7 +31,6 @@ class App extends Component {
                 <Route path="/local/:localId" component={Local}/>
                 <Route path="/add" component={LocalAdd}/>
                 <Route path="/form" component={Form}/>
-                <Route path="/stats" component={Stats}/>
               </Grid>
             </div>
             <Sidebar/>

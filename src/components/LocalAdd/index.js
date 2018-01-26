@@ -14,6 +14,18 @@ const mapDispatchToProps = dispatch => ({
   add: (data) => dispatch(addLocal(data))
 });
 
+const styles = {
+  paper: {
+    marginTop: 10,
+    marginBottom: 20,
+    padding: 16
+  },
+  row: {
+    width: '100%',
+    padding: 10,
+  }
+};
+
 class LocalAdd extends React.Component {
 
   state = {
@@ -36,35 +48,30 @@ class LocalAdd extends React.Component {
   render() {
     return (
       <Grid item xs={12}>
-      <form onSubmit={this.handleSubmit}>
-
-
-        <div style={{textAlign: "center"}}>
-              <Paper>
-                <div>
-                  <TextField placeholder="Name" name="name" onChange={this.handleChange}/>
-                </div>
-                <div>
-                  <TextField placeholder="Address" name="address" onChange={this.handleChange}/>
-                </div>
-                <div>
-                  <TextField placeholder="Website" name="website" onChange={this.handleChange}/>
-                </div>
-                <div>
-                  <Tooltip id="tooltip-icon" title="Add local to App">
-                  <Button raised color="primary" input type="submit" value="Add">
-                    Add
-                  </Button>
-                </Tooltip>
-                </div>
-                <Button raised color="link">
-                <Link to="/list">Back to list</Link>
+        <form onSubmit={this.handleSubmit}>
+          <Paper style={styles.paper}>
+            <div style={styles.row}>
+              <TextField placeholder="Name" name="name" onChange={this.handleChange}/>
+            </div>
+            <div style={styles.row}>
+              <TextField placeholder="Address" name="address" onChange={this.handleChange}/>
+            </div>
+            <div style={styles.row}>
+              <TextField placeholder="Website" name="website" onChange={this.handleChange}/>
+            </div>
+            <div>
+              <Tooltip id="tooltip-icon" title="Add local to App">
+                <Button raised color="primary" input type="submit" value="Add">
+                  Add
                 </Button>
-              </Paper>
+              </Tooltip>
+            </div>
 
-        </div>
-
-      </form>
+            <Button raised color="link">
+              <Link to="/list">Back to list</Link>
+            </Button>
+          </Paper>
+        </form>
       </Grid>
     );
   }

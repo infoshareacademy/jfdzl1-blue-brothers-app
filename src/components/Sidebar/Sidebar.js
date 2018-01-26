@@ -1,13 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
+import Link from '../Link';
 import Drawer from 'material-ui/Drawer';
+import Divider from 'material-ui/Divider';
 import List, {ListItem, ListItemIcon, ListItemText} from 'material-ui/List';
 import FaDaschbord from 'react-icons/lib/fa/dashboard';
 import FaCutlery from 'react-icons/lib/fa/cutlery'
 import FaPencil from 'react-icons/lib/fa/pencil'
 
-import {toggleSidebar} from './../../UI/logic';
+import {toggleSidebar} from './../../UI/state';
 
 const mapStateToProps = state => ({
   open: state.ui.sidebar.open
@@ -34,6 +35,7 @@ const Sidebar = (props) => (
             <ListItemText primary="Dashboard"/>
           </ListItem>
         </Link>
+        <Divider/>
         <Link to="/list">
           <ListItem button>
             <ListItemIcon>
@@ -42,6 +44,7 @@ const Sidebar = (props) => (
             <ListItemText primary="Locals"/>
           </ListItem>
         </Link>
+        <Divider/>
         <Link to="/add">
           <ListItem button>
             <ListItemIcon>
