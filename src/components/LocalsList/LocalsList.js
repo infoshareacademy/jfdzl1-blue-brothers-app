@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import Paper from 'material-ui/Paper'
 import IconButton from 'material-ui/IconButton';
 import List, {ListItem, ListItemSecondaryAction, ListItemText} from 'material-ui/List';
+import Avatar from 'material-ui/Avatar';
 import StarIcon from 'material-ui-icons/Star';
 import Grid from 'material-ui/Grid';
 import Divider from 'material-ui/Divider';
@@ -40,6 +41,7 @@ class LocalsList extends Component {
             {this.props.locals.map(local => (
               <div key={local.id} >
                 <ListItem button>
+                  <Avatar alt={local.name} src={local.image_url} />
                   <Link to={`/local/${local.id}`}>
                     <ListItemText primary={local.name} secondary={local.address}/>
                   </Link>
