@@ -4,11 +4,20 @@ import Grid from 'material-ui/Grid';
 import {CardContent} from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 import {LineChart, BarChart, Bar, Line, XAxis, YAxis, PieChart, Pie,} from 'recharts';
+import AppBar from 'material-ui/AppBar';
+import Toolbar from 'material-ui/Toolbar';
+import Button from 'material-ui/Button';
+import IconButton from 'material-ui/IconButton';
+import MenuIcon from 'material-ui-icons/Menu';
 
 const styles = {
   paper: {
     marginBottom: 20,
     padding: 16
+  },
+
+  container: {
+    textAlign: 'center'
   },
   grid: {
     direction: 'row',
@@ -19,17 +28,18 @@ const styles = {
 
 const Stats = props => (
   <Paper style={styles.paper}>
-    <Grid
-      container
-      alignItems={styles.grid.alignItems}
-      direction={styles.grid.direction}
-      justify={styles.grid.justify}
-    >
+    <Grid container textAlign="center" justify="center">
+      <div style={styles.container}>
       <CardContent>
-        <Typography type="headline" component="h2">
-          Statystki aplikacji
-        </Typography>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography type="title" color="inherit">
+              Statystki aplikacji
+            </Typography>
+          </Toolbar>
+        </AppBar>
       </CardContent>
+      </div>
     </Grid>
     <Grid
       container
