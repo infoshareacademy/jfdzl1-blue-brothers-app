@@ -7,6 +7,7 @@ import Grid from 'material-ui/Grid';
 import logo from './clubfinder.png'
 import Hero from './Hero'
 import header from './background.jpg'
+import {Link} from 'react-router-dom';
 
 const styles = {
   paper: {
@@ -36,13 +37,14 @@ const Banner = props => (
         <img src={header} width="100%" height="100%"/>
         <h3>cLUBfinder najlepsza wyszukiwarka lokali w Twojej okolicy!</h3>
         <div style={styles.container}>
+          <Link to="/list">
           <Button
-            onClick={'./list'}
             raised
             color="primary"
             style={styles.button}>
             Start
           </Button>
+          </Link>
         </div>
       </Paper>
     </Grid>
