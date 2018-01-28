@@ -1,36 +1,61 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react';
+import {connect} from 'react-redux';
+import Link from '../Link';
+import Drawer from 'material-ui/Drawer';
+import Divider from 'material-ui/Divider';
+import List, {ListItem, ListItemIcon, ListItemText} from 'material-ui/List';
+import FaDaschbord from 'react-icons/lib/fa/dashboard';
+import FaCutlery from 'react-icons/lib/fa/cutlery'
+import FaPencil from 'react-icons/lib/fa/pencil'
 
+import {toggleSidebar} from './../UI/state';
 
-class Sidebar extends Component {
-    render() {
-        return (
-            <div className="sidebar">
-                <Link to="/" className="sidebar-brand">
-                    {/* <img src="logo.svg" className="sidebar-logo" />*/}
-                </Link>
+const mapStateToProps = state => ({
+  open: state.ui.sidebar.open
+});
 
-                <div className="sidebar-left">
-                    <p>Sidebar</p>
-                    <ul className="sidebar-item-wrapper">
-                        <li className="sidebar-item">
-                            <Link className="sidebar-link" to="/path1">Link 1</Link>
-                        </li>
-                        <li className="sidebar-item">
-                            <Link className="sidebar-link" to="/path2">Link 2</Link>
-                        </li>
-                        <li className="sidebar-item">
-                            <Link className="sidebar-link" to="/path3">Link 3</Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+const mapDispatchToProps = dispatch => ({
+  toggleSidebar: () => dispatch(toggleSidebar())
+});
 
-        )
-    }
+const Sidebar = (props) => (
+  <Drawer open={props.open} onClose={props.toggleSidebar}>
+    <div
+      tabIndex={0}
+      role="button"
+      onClick={props.toggleSidebar}
+      onKeyDown={props.toggleSidebar}
+    >
+      <List>
+        <Link to="/">
+          <ListItem button>
+            <ListItemIcon>
+              <FaDaschbord/>
+            </ListItemIcon>
+            <ListItemText primary="Dashboard"/>
+          </ListItem>
+        </Link>
+        <Divider/>
+        <Link to="/list">
+          <ListItem button>
+            <ListItemIcon>
+              <FaCutlery/>
+            </ListItemIcon>
+            <ListItemText primary="Locals"/>
+          </ListItem>
+        </Link>
+        <Divider/>
+        <Link to="/add">
+          <ListItem button>
+            <ListItemIcon>
+              <FaPencil/>
+            </ListItemIcon>
+            <ListItemText primary="Add local"/>
+          </ListItem>
+        </Link>
+      </List>
+    </div>
+  </Drawer>
+);
 
-
-
-}
-
-export default Sidebar;
+export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);

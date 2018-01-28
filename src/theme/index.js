@@ -1,13 +1,22 @@
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    margin: 30,
     fontFamily: 'Roboto, sans-serif'
   },
   items: {
     direction: 'row',
     justify: 'center',
     alignItems: 'center'
+  },
+  fab: {
+    margin: 0,
+    top: 'auto',
+    right: 20,
+    bottom: 20,
+    left: 'auto',
+    position: 'fixed',
+    background: '#4054B2',
+    color: '#fff'
   }
 });
 
