@@ -29,13 +29,14 @@ class App extends Component {
         <ConnectedRouter history={history}>
           <div>
             <div className={classes.root}>
-              <Grid container className={classes.items}>
+
                 <Appbar/>
                 <Route exact path="/" component={Dashboard}/>
                 <Route path="/list" component={LocalsList}/>
                 <Route path="/local/:localId" component={Local}/>
                 <Route path="/add" component={LocalAdd}/>
                 <Route path="/form" component={Form}/>
+
                 <Route path="/stats" component={Stats}/>
               </Grid>
             </div>
