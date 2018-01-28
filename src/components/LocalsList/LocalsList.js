@@ -8,7 +8,8 @@ import Avatar from 'material-ui/Avatar';
 import StarIcon from 'material-ui-icons/Star';
 import Grid from 'material-ui/Grid';
 import Divider from 'material-ui/Divider';
-
+import Button from 'material-ui/Button'
+import {showNotification} from '../UI/state'
 import {init} from './state';
 
 const styles = {
@@ -24,8 +25,12 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  initData: () => dispatch(init())
+    initData: () => dispatch(init()),
+    showSnackbar: (message) => dispatch(showNotification('App in progress. App coming soon!'))
 });
+
+
+
 
 class LocalsList extends Component {
 
@@ -49,6 +54,13 @@ class LocalsList extends Component {
                     <p>Ilość osób polecających lokal: {local.rating}</p>
                   </Link>
                   <ListItemSecondaryAction>
+                    <Button
+                        onClick={this.props.showSnackbar}
+                        raised
+                        color="primary"
+                        style={styles.button}>
+                      Vote
+                    </Button>
                     <IconButton aria-label="Add to favorites">
                       <StarIcon />
                     </IconButton>

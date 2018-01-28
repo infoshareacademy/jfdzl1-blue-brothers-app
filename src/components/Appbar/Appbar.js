@@ -58,11 +58,9 @@ class MenuAppBar extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
-            <Tooltip id="tooltip-icon" title="Menu">
             <IconButton onClick={this.props.toggleSidebar} className={classes.menuButton} color="contrast" aria-label="Menu">
               <MenuIcon />
             </IconButton>
-            </Tooltip>
             <Typography type="title" color="inherit" className={classes.flex}>
               cLubFinder Application
             </Typography>
