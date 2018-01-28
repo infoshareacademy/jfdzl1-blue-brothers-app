@@ -7,6 +7,7 @@ import List, {ListItem, ListItemIcon, ListItemText} from 'material-ui/List';
 import FaDaschbord from 'react-icons/lib/fa/dashboard';
 import FaCutlery from 'react-icons/lib/fa/cutlery'
 import FaPencil from 'react-icons/lib/fa/pencil'
+import Stats from '../Stats';
 
 import {toggleSidebar} from './../UI/state';
 
@@ -53,6 +54,17 @@ const Sidebar = (props) => (
             <ListItemText primary="Add local"/>
           </ListItem>
         </Link>
+
+        <Divider/>
+        <Link to="/Stats">
+          <ListItem button>
+            <ListItemIcon>
+              <FaPencil/>
+            </ListItemIcon>
+            <ListItemText primary="Stats"/>
+          </ListItem>
+        </Link>
+
       </List>
     </div>
   </Drawer>
