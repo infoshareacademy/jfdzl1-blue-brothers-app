@@ -4,7 +4,7 @@ import Grid from 'material-ui/Grid';
 
 import Banner from './Banner'
 import Hero from './Hero';
-import Stats from './Stats';
+import Stats from '../Stats/Stats';
 import {showNotification} from '../UI/state';
 
 const mapDispatchToProps = dispatch => ({
@@ -14,8 +14,8 @@ const mapDispatchToProps = dispatch => ({
 const Dashboard = props => (
   <Grid item xs={12}>
     <Banner/>
+      <Stats/>
     <Hero showSnackbar={props.showSnackbar}/>
-    <Stats/>
   </Grid>
 );
 

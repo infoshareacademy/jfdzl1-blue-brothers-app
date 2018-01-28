@@ -19,6 +19,7 @@ import Notifications from './components/UI/Notifications';
 import LocalAdd from './components/LocalAdd';
 import Local from './components/Local';
 import { store, history } from './store';
+import Stats from './components/Stats';
 
 class App extends Component {
   render() {
@@ -35,6 +36,7 @@ class App extends Component {
                 <Route path="/local/:localId" component={Local}/>
                 <Route path="/add" component={LocalAdd}/>
                 <Route path="/form" component={Form}/>
+                <Route path="/stats" component={Stats}/>
               </Grid>
             </div>
             <Sidebar/>
