@@ -12,7 +12,7 @@ const styles = {
   },
   container: {
     textAlign: 'center',
-      height: 250
+      padding: 25
   },
   button: {
     textAlign: 'center',
@@ -38,7 +38,7 @@ const styles = {
 const Hero = props => (
 
   <Grid container textAlign="center" justify="center">
-    <Grid item xs={4}>
+    <Grid item xs={12} md={6}>
       <Paper>
         <div style={styles.container}>
 
@@ -52,7 +52,7 @@ const Hero = props => (
       </Paper>
     </Grid>
 
-    <Grid item xs={4}>
+    <Grid item xs={12} md={6}>
       <Paper>
         <div style={styles.container}>
           <img src={logo} alt="Logo"/>
@@ -63,7 +63,7 @@ const Hero = props => (
       </Paper>
     </Grid>
 
-    <Grid item xs={4}>
+    <Grid item xs={12} md={6}>
       <Paper>
         <div style={styles.container}>
           <FaThumbsOUp style={styles.infoIcon}/>

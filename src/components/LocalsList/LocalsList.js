@@ -46,6 +46,7 @@ class LocalsList extends Component {
                   <Avatar alt={local.name} src={local.image_url} />
                   <Link to={`/local/${local.id}`}>
                     <ListItemText primary={local.name} secondary={local.address}/>
+                    <p>Ilość osób polecających lokal: {local.rating}</p>
                   </Link>
                   <ListItemSecondaryAction>
                     <IconButton aria-label="Add to favorites">
