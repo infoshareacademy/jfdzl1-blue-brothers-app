@@ -14,7 +14,6 @@ const mapDispatchToProps = dispatch => ({
 const Dashboard = props => (
   <Grid item xs={12}>
     <Banner/>
-      <Stats/>
     <Hero showSnackbar={props.showSnackbar}/>
   </Grid>
 );

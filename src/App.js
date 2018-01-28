@@ -38,7 +38,6 @@ class App extends Component {
                 <Route path="/form" component={Form}/>
 
                 <Route path="/stats" component={Stats}/>
-              </Grid>
             </div>
             <Sidebar/>
             <Notifications/>

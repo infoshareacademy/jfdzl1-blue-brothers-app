@@ -7,6 +7,7 @@ import List, {ListItem, ListItemIcon, ListItemText} from 'material-ui/List';
 import FaDaschbord from 'react-icons/lib/fa/dashboard';
 import FaCutlery from 'react-icons/lib/fa/cutlery'
 import FaPencil from 'react-icons/lib/fa/pencil'
+import FaBarChart from 'react-icons/lib/fa/bar-chart'
 import Stats from '../Stats';
 
 import {toggleSidebar} from './../UI/state';
@@ -59,7 +60,7 @@ const Sidebar = (props) => (
         <Link to="/Stats">
           <ListItem button>
             <ListItemIcon>
-              <FaPencil/>
+              <FaBarChart/>
             </ListItemIcon>
             <ListItemText primary="Stats"/>
           </ListItem>
