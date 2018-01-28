@@ -11,7 +11,8 @@ const styles = {
     padding: 16
   },
   container: {
-    textAlign: 'center'
+    textAlign: 'center',
+      height: 250
   },
   button: {
     textAlign: 'center',
@@ -48,8 +49,6 @@ const Hero = props => (
           <p>Wystarczy chwila, aby dowiedzieć się który lokal jest właśnie dla Ciebie!</p>
         </div>
 
-        <div style={styles.container}>
-        </div>
       </Paper>
     </Grid>
 
@@ -60,7 +59,6 @@ const Hero = props => (
           <h4 style={styles.text}>Wyszukiwarka najlepszych lokali w Twojej okolicy</h4>
           <p>Uruchom aplikację i wyszukaj lokal idealny dla Ciebie!! </p>
           <p>Sprawdź jakie masz dostępne lokale w okolicy i wybierz odpowiedni dla siebie </p>
-
         </div>
       </Paper>
     </Grid>
@@ -72,9 +70,6 @@ const Hero = props => (
           <h4 style={styles.text}>Ponad 95% użytkowników zadowolonych z aplikacji</h4>
           <p>Przekonaj się jak działa aplikacja i dołącz do zadowolonych użytkowników</p>
           <p>Aplikacja jest darmowa i dostępna z każdego miejsca na Ziemi w dodatku działa nawet na powolnym łączu!</p>
-        </div>
-
-        <div style={styles.container}>
         </div>
       </Paper>
     </Grid>
