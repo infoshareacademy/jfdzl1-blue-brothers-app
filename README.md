@@ -2,6 +2,8 @@
 
 Demo: http://app.blue-brothers.jfdzl1.is-academy.pl
 
+JFDZL1 projects: https://github.com/infoshareacademy/jfdzl1-projects
+
 ## Our other projects
 * Project website: [demo](http://blue-brothers.jfdzl1.is-academy.pl), [repo](https://github.com/infoshareacademy/jfdzl1-blue-brothers-www)
 * Game: [demo](http://blue-brothers.jfdzl1.is-academy.pl/game), [repo](https://github.com/infoshareacademy/jfdzl1-blue-brothers-game)
