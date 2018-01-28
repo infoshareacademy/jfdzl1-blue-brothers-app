@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Grid from 'material-ui/Grid';
 import Paper from 'material-ui/Paper';
-import Avatar from 'material-ui/Avatar';
+import Button from 'material-ui/Button'
 
 
 import { getLocal } from './state';
@@ -44,13 +44,18 @@ class Local extends React.Component {
               <Grid item xs={12}>
                   <Paper style={styles.paper}>
                       <div style={styles.container}>
-        <h1>Local: {this.props.local.name}</h1>
-        <p>Adres: {this.props.local.address}</p>
-        <p>www: <a href={this.props.local.website}>{this.props.local.website}</a></p>
+        <h1>{this.props.local.name}</h1>
+                          <h4>Adres:</h4><h3>{this.props.local.address}</h3>
+                          <h4>www:</h4> <h3> <a href={this.props.local.website}>{this.props.local.website}</a></h3>
                           <img alt={this.props.local.name} src={this.props.local.image_url} />
 
-                      </div>
+                      </div><Button
+                      onClick={this.props.showSnackbar}
+                      raised
+                      color="default"
+                      style={styles.button}>
                       <Link to="/list">Back to list</Link>
+                  </Button>
                   </Paper>
               </Grid>
           </Grid>
