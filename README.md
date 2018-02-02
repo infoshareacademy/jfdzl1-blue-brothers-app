@@ -1,5 +1,11 @@
 # JFDZL1 Blue Brothers - App
 
+Run:
+```sh
+npm install
+npm start
+```
+
 Demo: http://app.blue-brothers.jfdzl1.is-academy.pl
 
 JFDZL1 projects: https://github.com/infoshareacademy/jfdzl1-projects
